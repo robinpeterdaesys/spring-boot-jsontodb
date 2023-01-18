@@ -1,6 +1,6 @@
 package dev.danvega.service;
 
-import dev.danvega.domain.User;
+import dev.danvega.domain.users.User;
 import dev.danvega.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
