@@ -38,6 +38,7 @@ public class Chart {
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
+  @JoinColumn(name = "chartId")
   private List<Datapoint> datapoints = new ArrayList<>();
 
 }

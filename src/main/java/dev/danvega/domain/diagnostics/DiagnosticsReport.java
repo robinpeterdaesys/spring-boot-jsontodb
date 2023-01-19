@@ -31,12 +31,14 @@ public class DiagnosticsReport {
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
+  @JoinColumn(name = "diagnosticsReportId")
   private List<Metric> metrics = new ArrayList<>();
 
   @OneToMany(
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
+  @JoinColumn(name = "diagnosticsReportId")
   private List<Chart> charts = new ArrayList<>();
 
 }

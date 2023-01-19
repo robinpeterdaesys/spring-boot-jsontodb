@@ -28,6 +28,7 @@ public class Datapoint {
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
+  @JoinColumn(name = "datapointId")
   private List<Point> points = new ArrayList<>();
 
 }
