@@ -2,7 +2,9 @@ package dev.danvega;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.danvega.domain.User;
+import dev.danvega.domain.users.User;
+import dev.danvega.domain.diagnostics.DiagnosticsReport;
+import dev.danvega.service.DiagnosticsReportService;
 import dev.danvega.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -35,5 +37,23 @@ public class JsontodbApplication {
 				System.out.println("Unable to save users: " + e.getMessage());
 			}
 	    };
+	}
+
+	@Bean
+	CommandLineRunner runnerDiagnosticsReport(DiagnosticsReportService diagnosticsReportService){
+		return args -> {
+			// read JSON and load json
+			ObjectMapper mapper = new ObjectMapper();
+			TypeReference<DiagnosticsReport> typeReference = new TypeReference<DiagnosticsReport>(){};
+			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Continues_Metrics.json");
+			try {
+				DiagnosticsReport diagnosticsReport = mapper.readValue(inputStream,typeReference);
+				System.out.println("diagnosticsReports"+diagnosticsReport);
+				diagnosticsReportService.save(diagnosticsReport);
+				System.out.println("DiagnosticsReports Saved!");
+			} catch (IOException e){
+				System.out.println("Unable to save DiagnosticsReports: " + e.getMessage());
+			}
+		};
 	}
 }
