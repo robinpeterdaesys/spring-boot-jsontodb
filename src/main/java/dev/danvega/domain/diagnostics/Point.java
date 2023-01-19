@@ -1,5 +1,6 @@
 package dev.danvega.domain.diagnostics;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,7 @@ public class Point {
           strategy = GenerationType.SEQUENCE,
           generator = "point_sequence"
   )
+  @JsonIgnore
   private Long pointId;
   private Double x;
   private Double y;

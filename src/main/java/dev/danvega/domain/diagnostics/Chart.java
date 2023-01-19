@@ -1,5 +1,6 @@
 package dev.danvega.domain.diagnostics;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,7 @@ public class Chart {
           strategy = GenerationType.SEQUENCE,
           generator = "chart_sequence"
   )
+  @JsonIgnore
   private Long chartId;
   private Long id;
   private String name;
