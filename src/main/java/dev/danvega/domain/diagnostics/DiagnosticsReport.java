@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -24,11 +27,25 @@ public class DiagnosticsReport {
           generator = "diagnostics_report_sequence"
   )
   @JsonIgnore
-  private Long id;
   private Long diagnosticsReportId;
   private Long modelId;
   private Long diagnosticsDefinitionId;
   private Long diagnosticsId;
+  private Long[][] confusionMatrix;
+  @OneToMany(
+          cascade = CascadeType.ALL,
+          orphanRemoval = true
+  )
+  @JoinColumn(name = "diagnosticsReportId")
+  private Map<String,List<ClassificationReport>> classificationReport = new HashMap<>();
+
+//  @OneToOne(
+//          cascade = CascadeType.ALL,
+//          orphanRemoval = true
+//  )
+//  @JoinColumn(name = "diagnosticsReportId")
+//  private LiftGain liftGain;
+
   @OneToMany(
           cascade = CascadeType.ALL,
           orphanRemoval = true

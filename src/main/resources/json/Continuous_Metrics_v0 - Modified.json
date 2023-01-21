@@ -1,8 +1,7 @@
 {
-  "modelId": "2",
-  "diagnosticsId": "2",
-  "diagnosticsDefinitionId": "3",
-  "diagnosticsReportId": "2",
+  "modelId": "1",
+  "diagnosticsId": "1",
+  "diagnosticsDefinitionId": "1",
   "metrics": [
     {
       "id": 1,

@@ -40,12 +40,30 @@ public class JsontodbApplication {
 	}
 
 	@Bean
-	CommandLineRunner runnerDiagnosticsReport(DiagnosticsReportService diagnosticsReportService){
+	CommandLineRunner runnerDiagnosticsReport1(DiagnosticsReportService diagnosticsReportService){
 		return args -> {
 			// read JSON and load json
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<DiagnosticsReport> typeReference = new TypeReference<DiagnosticsReport>(){};
-			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Continues_Metrics.json");
+			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Continuous_Metrics_v0 - Modified.json");
+			try {
+				DiagnosticsReport diagnosticsReport = mapper.readValue(inputStream,typeReference);
+				System.out.println("diagnosticsReports"+diagnosticsReport);
+				diagnosticsReportService.save(diagnosticsReport);
+				System.out.println("DiagnosticsReports Saved!");
+			} catch (IOException e){
+				System.out.println("Unable to save DiagnosticsReports: " + e.getMessage());
+			}
+		};
+	}
+
+	@Bean
+	CommandLineRunner runnerDiagnosticsReport2(DiagnosticsReportService diagnosticsReportService){
+		return args -> {
+			// read JSON and load json
+			ObjectMapper mapper = new ObjectMapper();
+			TypeReference<DiagnosticsReport> typeReference = new TypeReference<DiagnosticsReport>(){};
+			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_v2 - Modified.json");
 			try {
 				DiagnosticsReport diagnosticsReport = mapper.readValue(inputStream,typeReference);
 				System.out.println("diagnosticsReports"+diagnosticsReport);
