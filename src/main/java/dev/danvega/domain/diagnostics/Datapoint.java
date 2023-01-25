@@ -25,6 +25,8 @@ public class Datapoint {
   )
   @JsonIgnore
   private Long datapointId;
+  private String color;
+  private Long width;
   private String label;
   @OneToMany(
           cascade = CascadeType.ALL,

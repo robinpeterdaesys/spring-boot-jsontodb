@@ -13,10 +13,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+//@Entity
+//@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class LiftGain {
   @Id
   @SequenceGenerator(

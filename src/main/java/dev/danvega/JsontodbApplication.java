@@ -21,57 +21,75 @@ public class JsontodbApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JsontodbApplication.class, args);
 	}
+//
+//	@Bean
+//	CommandLineRunner userRunner(UserService userService){
+//	    return args -> {
+//			// read JSON and load json
+//			ObjectMapper mapper = new ObjectMapper();
+//			TypeReference<List<User>> typeReference = new TypeReference<List<User>>(){};
+//			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/users.json");
+//			try {
+//				List<User> users = mapper.readValue(inputStream,typeReference);
+//				userService.save(users);
+//				System.out.println("Users Saved!");
+//			} catch (IOException e){
+//				System.out.println("Unable to save users: " + e.getMessage());
+//			}
+//	    };
+//	}
+
+//	@Bean
+//	CommandLineRunner continuousMetricsDiagnosticsReportRunner(DiagnosticsReportService diagnosticsReportService){
+//		return args -> {
+//			// read JSON and load json
+//			ObjectMapper mapper = new ObjectMapper();
+//			TypeReference<DiagnosticsReport> typeReference = new TypeReference<DiagnosticsReport>(){};
+//			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Continuous_Metrics_v0 - Modified.json");
+//			try {
+//				DiagnosticsReport diagnosticsReport = mapper.readValue(inputStream,typeReference);
+//				System.out.println("ContinuousMetricsDiagnosticsReport"+diagnosticsReport);
+//				diagnosticsReportService.save(diagnosticsReport);
+//				System.out.println("ContinuousMetricsDiagnosticsReport Saved!");
+//			} catch (IOException e){
+//				System.out.println("Unable to save ContinuousMetricsDiagnosticsReport: " + e.getMessage());
+//			}
+//		};
+//	}
 
 	@Bean
-	CommandLineRunner runner(UserService userService){
-	    return args -> {
-			// read JSON and load json
-			ObjectMapper mapper = new ObjectMapper();
-			TypeReference<List<User>> typeReference = new TypeReference<List<User>>(){};
-			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/users.json");
-			try {
-				List<User> users = mapper.readValue(inputStream,typeReference);
-				userService.save(users);
-				System.out.println("Users Saved!");
-			} catch (IOException e){
-				System.out.println("Unable to save users: " + e.getMessage());
-			}
-	    };
-	}
-
-	@Bean
-	CommandLineRunner runnerDiagnosticsReport1(DiagnosticsReportService diagnosticsReportService){
+	CommandLineRunner classificationMetricsDiagnosticsReportRunner(DiagnosticsReportService diagnosticsReportService){
 		return args -> {
 			// read JSON and load json
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<DiagnosticsReport> typeReference = new TypeReference<DiagnosticsReport>(){};
-			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Continuous_Metrics_v0 - Modified.json");
+			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_v2 - Modified - Excluded LiftGain.json");
 			try {
 				DiagnosticsReport diagnosticsReport = mapper.readValue(inputStream,typeReference);
 				System.out.println("diagnosticsReports"+diagnosticsReport);
 				diagnosticsReportService.save(diagnosticsReport);
-				System.out.println("DiagnosticsReports Saved!");
+				System.out.println("ClassificationMetricsDiagnosticsReport Saved!");
 			} catch (IOException e){
-				System.out.println("Unable to save DiagnosticsReports: " + e.getMessage());
+				System.out.println("Unable to save ClassificationMetricsDiagnosticsReport: " + e.getMessage());
 			}
 		};
 	}
 
-	@Bean
-	CommandLineRunner runnerDiagnosticsReport2(DiagnosticsReportService diagnosticsReportService){
-		return args -> {
-			// read JSON and load json
-			ObjectMapper mapper = new ObjectMapper();
-			TypeReference<DiagnosticsReport> typeReference = new TypeReference<DiagnosticsReport>(){};
-			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_v2 - Modified.json");
-			try {
-				DiagnosticsReport diagnosticsReport = mapper.readValue(inputStream,typeReference);
-				System.out.println("diagnosticsReports"+diagnosticsReport);
-				diagnosticsReportService.save(diagnosticsReport);
-				System.out.println("DiagnosticsReports Saved!");
-			} catch (IOException e){
-				System.out.println("Unable to save DiagnosticsReports: " + e.getMessage());
-			}
-		};
-	}
+//	@Bean
+//	CommandLineRunner classificationMetricsNoThresholdDiagnosticsReportRunner(DiagnosticsReportService diagnosticsReportService){
+//		return args -> {
+//			// read JSON and load json
+//			ObjectMapper mapper = new ObjectMapper();
+//			TypeReference<DiagnosticsReport> typeReference = new TypeReference<DiagnosticsReport>(){};
+//			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_no_threshold - Modified - Excluded LiftGain.json");
+//			try {
+//				DiagnosticsReport diagnosticsReport = mapper.readValue(inputStream,typeReference);
+//				System.out.println("diagnosticsReports"+diagnosticsReport);
+//				diagnosticsReportService.save(diagnosticsReport);
+//				System.out.println("ClassificationMetricsNoThresholdDiagnosticsReport Saved!");
+//			} catch (IOException e){
+//				System.out.println("Unable to save ClassificationMetricsNoThresholdDiagnosticsReport: " + e.getMessage());
+//			}
+//		};
+//	}
 }

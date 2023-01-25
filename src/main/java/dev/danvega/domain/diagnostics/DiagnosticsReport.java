@@ -1,6 +1,7 @@
 package dev.danvega.domain.diagnostics;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import dev.danvega.domain.enums.ClassificationReportType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -37,7 +38,8 @@ public class DiagnosticsReport {
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
-  private Map<String,List<ClassificationReport>> classificationReport = new HashMap<>();
+  @MapKeyEnumerated(EnumType.STRING)
+  private Map<ClassificationReportType,ClassificationReport> classificationReport = new HashMap<>();
 
 //  @OneToOne(
 //          cascade = CascadeType.ALL,
