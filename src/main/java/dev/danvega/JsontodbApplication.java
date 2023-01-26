@@ -57,13 +57,30 @@ public class JsontodbApplication {
 //		};
 //	}
 
+//	@Bean
+//	CommandLineRunner classificationMetricsDiagnosticsReportExcLiftRunner(DiagnosticsReportService diagnosticsReportService){
+//		return args -> {
+//			// read JSON and load json
+//			ObjectMapper mapper = new ObjectMapper();
+//			TypeReference<DiagnosticsReport> typeReference = new TypeReference<DiagnosticsReport>(){};
+//			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_v2 - Modified - Excluded LiftGain.json");
+//			try {
+//				DiagnosticsReport diagnosticsReport = mapper.readValue(inputStream,typeReference);
+//				System.out.println("diagnosticsReports"+diagnosticsReport);
+//				diagnosticsReportService.save(diagnosticsReport);
+//				System.out.println("ClassificationMetricsDiagnosticsReport Saved!");
+//			} catch (IOException e){
+//				System.out.println("Unable to save ClassificationMetricsDiagnosticsReport: " + e.getMessage());
+//			}
+//		};
+//	}
 	@Bean
 	CommandLineRunner classificationMetricsDiagnosticsReportRunner(DiagnosticsReportService diagnosticsReportService){
 		return args -> {
 			// read JSON and load json
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<DiagnosticsReport> typeReference = new TypeReference<DiagnosticsReport>(){};
-			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_v2 - Modified - Excluded LiftGain.json");
+			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_v2 - Modified.json");
 			try {
 				DiagnosticsReport diagnosticsReport = mapper.readValue(inputStream,typeReference);
 				System.out.println("diagnosticsReports"+diagnosticsReport);

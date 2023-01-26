@@ -41,12 +41,13 @@ public class DiagnosticsReport {
   @MapKeyEnumerated(EnumType.STRING)
   private Map<ClassificationReportType,ClassificationReport> classificationReport = new HashMap<>();
 
-//  @OneToOne(
-//          cascade = CascadeType.ALL,
-//          orphanRemoval = true
-//  )
-//  @JoinColumn(name = "diagnosticsReportId")
-//  private LiftGain liftGain;
+  @OneToMany(
+          cascade = CascadeType.ALL,
+          orphanRemoval = true
+  )
+  @JoinColumn(name = "diagnosticsReportId")
+  @MapKeyColumn(name="LIFT_GAIN_TYPE")
+  private Map<String, LiftGain> liftGain;
 
   @OneToMany(
           cascade = CascadeType.ALL,

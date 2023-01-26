@@ -1,22 +1,16 @@
 package dev.danvega.domain.diagnostics;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-//@Entity
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class LiftGain {
   @Id
   @SequenceGenerator(
@@ -30,14 +24,29 @@ public class LiftGain {
   )
   @JsonIgnore
   private Long liftGainId;
-//  @OneToMany(
-//          cascade = CascadeType.ALL,
-//          orphanRemoval = true
-//  )
-//  @JoinColumn(name = "liftGainId")
-//  private List<SemiDecile> semiDeciles = new ArrayList<>();
-//  private Map<String,Integer> semiDecile = new HashMap<>();
-//  private List<Integer> numberOfEvents = new ArrayList<Integer>();
-//  private List<Integer> numberOfPositiveEvents = new ArrayList<Integer>();
-//  private List<Integer> maxPossibleNumberOfPositiveEvents = new ArrayList<Integer>();
+
+  private Long zero;
+  private Long one;
+  private Long two;
+  private Long three;
+  private Long four;
+  private Long five;
+  private Long six;
+  private Long seven;
+  private Long eight;
+  private Long nine;
+  private Long ten;
+  private Long eleven;
+  private Long twelve;
+  private Long thirteen;
+  private Long fourteen;
+  private Long fifteen;
+  private Long sixteen;
+  private Long seventeen;
+  private Long eighteen;
+  private Long nineteen;
+
+  @ManyToOne
+  private DiagnosticsReport diagnosticsReport;
+
 }
