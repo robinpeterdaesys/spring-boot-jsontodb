@@ -1,5 +1,6 @@
 package dev.danvega.domain.diagnostics;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,28 +26,26 @@ public class LiftGain {
   @JsonIgnore
   private Long liftGainId;
 
-  private Long zero;
-  private Long one;
-  private Long two;
-  private Long three;
-  private Long four;
-  private Long five;
-  private Long six;
-  private Long seven;
-  private Long eight;
-  private Long nine;
-  private Long ten;
-  private Long eleven;
-  private Long twelve;
-  private Long thirteen;
-  private Long fourteen;
-  private Long fifteen;
-  private Long sixteen;
-  private Long seventeen;
-  private Long eighteen;
-  private Long nineteen;
+  private Float zero;
+  private Float one;
+  private Float two;
+  private Float three;
+  private Float four;
+  private Float five;
+  private Float six;
+  private Float seven;
+  private Float eight;
+  private Float nine;
+  private Float ten;
+  private Float eleven;
+  private Float twelve;
+  private Float thirteen;
+  private Float fourteen;
+  private Float fifteen;
+  private Float sixteen;
+  private Float seventeen;
+  private Float eighteen;
+  private Float nineteen;
 
-  @ManyToOne
-  private DiagnosticsReport diagnosticsReport;
 
 }

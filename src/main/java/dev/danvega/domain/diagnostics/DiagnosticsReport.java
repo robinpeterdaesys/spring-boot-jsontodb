@@ -38,8 +38,8 @@ public class DiagnosticsReport {
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
-  @MapKeyEnumerated(EnumType.STRING)
-  private Map<ClassificationReportType,ClassificationReport> classificationReport = new HashMap<>();
+  @MapKeyColumn(name="CLASSIFICATION_REPORT_TYPE")
+  private Map<String, ClassificationReport> classificationReport;
 
   @OneToMany(
           cascade = CascadeType.ALL,
