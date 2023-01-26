@@ -1,4 +1,4 @@
-package dev.danvega.domain.diagnostics;
+package com.robo.domain.diagnostics;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Datapoint {
+public class MlAiModelDiaRepDatapointEntity {
   @Id
   @SequenceGenerator(
           name = "datapoint_sequence",
@@ -33,6 +33,6 @@ public class Datapoint {
           orphanRemoval = true
   )
   @JoinColumn(name = "datapointId")
-  private List<Point> points = new ArrayList<>();
+  private List<MlAiModelDiaRepPointEntity> points = new ArrayList<>();
 
 }

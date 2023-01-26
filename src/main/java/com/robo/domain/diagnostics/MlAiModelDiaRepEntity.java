@@ -1,14 +1,12 @@
-package dev.danvega.domain.diagnostics;
+package com.robo.domain.diagnostics;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import dev.danvega.domain.enums.ClassificationReportType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +14,7 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DiagnosticsReport {
+public class MlAiModelDiaRepEntity {
   @Id
   @SequenceGenerator(
           name = "diagnostics_report_sequence",
@@ -39,7 +37,7 @@ public class DiagnosticsReport {
   )
   @JoinColumn(name = "diagnosticsReportId")
   @MapKeyColumn(name="CLASSIFICATION_REPORT_TYPE")
-  private Map<String, ClassificationReport> classificationReport;
+  private Map<String, MlAiModelDiaRepClassificationReportEntity> classificationReport;
 
   @OneToMany(
           cascade = CascadeType.ALL,
@@ -47,20 +45,20 @@ public class DiagnosticsReport {
   )
   @JoinColumn(name = "diagnosticsReportId")
   @MapKeyColumn(name="LIFT_GAIN_TYPE")
-  private Map<String, LiftGain> liftGain;
+  private Map<String, MlAiModelDiaRepLiftGainEntity> liftGain;
 
   @OneToMany(
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
-  private List<Metric> metrics = new ArrayList<>();
+  private List<MlAiModelDiaRepMetricEntity> metrics = new ArrayList<>();
 
   @OneToMany(
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
-  private List<Chart> charts = new ArrayList<>();
+  private List<MlAiModelDiaRepChartEntity> charts = new ArrayList<>();
 
 }

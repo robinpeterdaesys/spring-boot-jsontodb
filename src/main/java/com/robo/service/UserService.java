@@ -1,7 +1,7 @@
-package dev.danvega.service;
+package com.robo.service;
 
-import dev.danvega.domain.users.User;
-import dev.danvega.repository.UserRepository;
+import com.robo.domain.users.User;
+import com.robo.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package dev.danvega.domain.diagnostics;
+package com.robo.domain.diagnostics;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Metric {
+public class MlAiModelDiaRepMetricEntity {
   @Id
   @SequenceGenerator(
           name = "metric_sequence",

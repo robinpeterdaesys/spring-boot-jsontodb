@@ -1,4 +1,4 @@
-package dev.danvega.domain.users;
+package com.robo.domain.users;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

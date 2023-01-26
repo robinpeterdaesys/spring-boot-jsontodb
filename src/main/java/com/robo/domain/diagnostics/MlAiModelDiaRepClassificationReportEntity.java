@@ -1,4 +1,4 @@
-package dev.danvega.domain.diagnostics;
+package com.robo.domain.diagnostics;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ClassificationReport {
+public class MlAiModelDiaRepClassificationReportEntity {
   @Id
   @SequenceGenerator(
           name = "classification_report_sequence",

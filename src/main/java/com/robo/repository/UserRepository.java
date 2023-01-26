@@ -1,6 +1,6 @@
-package dev.danvega.repository;
+package com.robo.repository;
 
-import dev.danvega.domain.users.User;
+import com.robo.domain.users.User;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User, Long> {

@@ -1,6 +1,5 @@
-package dev.danvega.domain.diagnostics;
+package com.robo.domain.diagnostics;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,7 +11,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LiftGain {
+public class MlAiModelDiaRepLiftGainEntity {
   @Id
   @SequenceGenerator(
           name = "lift_gain_sequence",

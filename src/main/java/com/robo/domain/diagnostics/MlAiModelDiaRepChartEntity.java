@@ -1,4 +1,4 @@
-package dev.danvega.domain.diagnostics;
+package com.robo.domain.diagnostics;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Chart {
+public class MlAiModelDiaRepChartEntity {
   @Id
   @SequenceGenerator(
           name = "chart_sequence",
@@ -41,6 +41,6 @@ public class Chart {
           orphanRemoval = true
   )
   @JoinColumn(name = "chartId")
-  private List<Datapoint> datapoints = new ArrayList<>();
+  private List<MlAiModelDiaRepDatapointEntity> datapoints = new ArrayList<>();
 
 }

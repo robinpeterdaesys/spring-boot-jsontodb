@@ -1,23 +1,23 @@
-package dev.danvega.controller;
+package com.robo.controller;
 
-import dev.danvega.domain.diagnostics.DiagnosticsReport;
-import dev.danvega.service.DiagnosticsReportService;
+import com.robo.domain.diagnostics.MlAiModelDiaRepEntity;
+import com.robo.service.MlAiModelDiaRepService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/diagnostics-reports")
-public class DiagnosticsReportController {
+public class MlAiModelDiaRepController {
 
-    private DiagnosticsReportService diagnosticsReportService;
+    private final MlAiModelDiaRepService diagnosticsReportService;
 
-    public DiagnosticsReportController(DiagnosticsReportService diagnosticsReportService) {
+    public MlAiModelDiaRepController(MlAiModelDiaRepService diagnosticsReportService) {
         this.diagnosticsReportService = diagnosticsReportService;
     }
 
     @GetMapping("/list")
-    public Iterable<DiagnosticsReport> list() {
+    public Iterable<MlAiModelDiaRepEntity> list() {
         return diagnosticsReportService.list();
     }
 
