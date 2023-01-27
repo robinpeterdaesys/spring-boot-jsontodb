@@ -11,6 +11,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "ML_AI_MODEL_DIA_REP_LIFT_GAIN")
 public class MlAiModelDiaRepLiftGainEntity {
   @Id
   @SequenceGenerator(
@@ -45,6 +46,5 @@ public class MlAiModelDiaRepLiftGainEntity {
   private Float seventeen;
   private Float eighteen;
   private Float nineteen;
-
 
 }

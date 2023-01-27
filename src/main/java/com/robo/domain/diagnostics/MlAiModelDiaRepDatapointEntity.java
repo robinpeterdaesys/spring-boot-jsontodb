@@ -7,11 +7,15 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "ML_AI_MODEL_DIA_REP_DATAPOINT")
 public class MlAiModelDiaRepDatapointEntity {
   @Id
   @SequenceGenerator(
@@ -33,6 +37,6 @@ public class MlAiModelDiaRepDatapointEntity {
           orphanRemoval = true
   )
   @JoinColumn(name = "datapointId")
-  private List<MlAiModelDiaRepPointEntity> points = new ArrayList<>();
+  private Set<MlAiModelDiaRepPointEntity> points = new HashSet<>();
 
 }

@@ -1,6 +1,6 @@
 package com.robo.controller;
 
-import com.robo.domain.diagnostics.MlAiModelDiaRepEntity;
+import com.robo.domain.diagnostics.MlAiModelDiaReportEntity;
 import com.robo.service.MlAiModelDiaRepService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +17,7 @@ public class MlAiModelDiaRepController {
     }
 
     @GetMapping("/list")
-    public Iterable<MlAiModelDiaRepEntity> list() {
+    public Iterable<MlAiModelDiaReportEntity> list() {
         return diagnosticsReportService.list();
     }
 

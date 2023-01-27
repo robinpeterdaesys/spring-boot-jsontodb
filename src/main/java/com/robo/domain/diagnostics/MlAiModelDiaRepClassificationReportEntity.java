@@ -11,6 +11,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "ML_AI_MODEL_DIA_REP_CLASSIFICATION_REPORT")
 public class MlAiModelDiaRepClassificationReportEntity {
   @Id
   @SequenceGenerator(

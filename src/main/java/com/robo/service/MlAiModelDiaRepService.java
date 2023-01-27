@@ -1,7 +1,7 @@
 package com.robo.service;
 
 import com.robo.repository.MlAiModelDiaRepRepository;
-import com.robo.domain.diagnostics.MlAiModelDiaRepEntity;
+import com.robo.domain.diagnostics.MlAiModelDiaReportEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,15 +15,15 @@ public class MlAiModelDiaRepService {
     this.diagnosticsReportRepository = diagnosticsReportRepository;
   }
 
-  public Iterable<MlAiModelDiaRepEntity> list() {
+  public Iterable<MlAiModelDiaReportEntity> list() {
     return diagnosticsReportRepository.findAll();
   }
 
-  public MlAiModelDiaRepEntity save(MlAiModelDiaRepEntity diagnosticsReport) {
+  public MlAiModelDiaReportEntity save(MlAiModelDiaReportEntity diagnosticsReport) {
     return diagnosticsReportRepository.save(diagnosticsReport);
   }
 
-  public void save(List<MlAiModelDiaRepEntity> diagnosticsReports) {
+  public void save(List<MlAiModelDiaReportEntity> diagnosticsReports) {
     diagnosticsReportRepository.saveAll(diagnosticsReports);
   }
 }

@@ -6,15 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MlAiModelDiaRepEntity {
+@Table(name = "ML_AI_MODEL_DIA_REPORT")
+public class MlAiModelDiaReportEntity {
   @Id
   @SequenceGenerator(
           name = "diagnostics_report_sequence",
@@ -52,13 +51,13 @@ public class MlAiModelDiaRepEntity {
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
-  private List<MlAiModelDiaRepMetricEntity> metrics = new ArrayList<>();
+  private Set<MlAiModelDiaRepMetricEntity> metrics = new HashSet<>();
 
   @OneToMany(
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
-  private List<MlAiModelDiaRepChartEntity> charts = new ArrayList<>();
+  private Set<MlAiModelDiaRepChartEntity> charts = new HashSet<>();
 
 }
