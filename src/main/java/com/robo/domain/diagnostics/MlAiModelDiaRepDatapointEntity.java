@@ -37,6 +37,6 @@ public class MlAiModelDiaRepDatapointEntity {
           orphanRemoval = true
   )
   @JoinColumn(name = "datapointId")
-  private Set<MlAiModelDiaRepPointEntity> points = new HashSet<>();
+  private List<MlAiModelDiaRepPointEntity> points = new ArrayList<>();
 
 }

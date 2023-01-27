@@ -45,6 +45,6 @@ public class MlAiModelDiaRepChartEntity {
           orphanRemoval = true
   )
   @JoinColumn(name = "chartId")
-  private Set<MlAiModelDiaRepDatapointEntity> datapoints = new HashSet<>();
+  private List<MlAiModelDiaRepDatapointEntity> datapoints = new ArrayList<>();
 
 }

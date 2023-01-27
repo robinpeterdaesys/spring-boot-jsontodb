@@ -51,13 +51,13 @@ public class MlAiModelDiaReportEntity {
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
-  private Set<MlAiModelDiaRepMetricEntity> metrics = new HashSet<>();
+  private List<MlAiModelDiaRepMetricEntity> metrics = new ArrayList<>();
 
   @OneToMany(
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
-  private Set<MlAiModelDiaRepChartEntity> charts = new HashSet<>();
+  private List<MlAiModelDiaRepChartEntity> charts = new ArrayList<>();
 
 }
