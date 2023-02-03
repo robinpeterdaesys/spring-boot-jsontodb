@@ -25,39 +25,64 @@ public class MlAiModelDiaReportEntity {
           generator = "diagnostics_report_sequence"
   )
   @JsonIgnore
+  @Column(name = "DIAGNOSTICS_REPORT_ID")
   private Long diagnosticsReportId;
   private Long modelId;
   private Long diagnosticsDefinitionId;
   private Long diagnosticsId;
   private Long[][] confusionMatrix;
   @OneToMany(
+          mappedBy = "diagnosticsReport",
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
   @MapKeyColumn(name="CLASSIFICATION_REPORT_TYPE")
-  private Map<String, MlAiModelDiaRepClassificationReportEntity> classificationReport;
+  private Map<String, MlAiModelDiaRepClassificationReportEntity> classificationReports;
 
   @OneToMany(
+          mappedBy = "diagnosticsReport",
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
   @MapKeyColumn(name="LIFT_GAIN_TYPE")
-  private Map<String, MlAiModelDiaRepLiftGainEntity> liftGain;
+  private Map<String, MlAiModelDiaRepLiftGainEntity> liftGains;
+
 
   @OneToMany(
+          mappedBy = "diagnosticsReport",
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
   private List<MlAiModelDiaRepMetricEntity> metrics = new ArrayList<>();
 
+  public void addMetric(MlAiModelDiaRepMetricEntity metric) {
+    metrics.add(metric);
+    metric.setDiagnosticsReport(this);
+  }
+
+  public void removeMetric(MlAiModelDiaRepMetricEntity metric) {
+    metrics.remove(metric);
+    metric.setDiagnosticsReport(null);
+  }
+
   @OneToMany(
+          mappedBy = "diagnosticsReport",
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
   private List<MlAiModelDiaRepChartEntity> charts = new ArrayList<>();
 
+  public void addChart(MlAiModelDiaRepChartEntity chart) {
+    charts.add(chart);
+    chart.setDiagnosticsReport(this);
+  }
+
+  public void removePoint(MlAiModelDiaRepChartEntity chart) {
+    charts.remove(chart);
+    chart.setDiagnosticsReport(null);
+  }
 }

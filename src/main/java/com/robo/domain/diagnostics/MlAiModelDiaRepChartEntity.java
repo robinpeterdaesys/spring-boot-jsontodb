@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Data
@@ -28,6 +26,7 @@ public class MlAiModelDiaRepChartEntity {
           generator = "chart_sequence"
   )
   @JsonIgnore
+  @Column(name = "CHART_ID")
   private Long chartId;
   private Long id;
   private String name;
@@ -41,10 +40,22 @@ public class MlAiModelDiaRepChartEntity {
   public Double[] yaxislabels;
 
   @OneToMany(
+          mappedBy = "chart",
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
   @JoinColumn(name = "chartId")
   private List<MlAiModelDiaRepDatapointEntity> datapoints = new ArrayList<>();
+  public void addDatapoint(MlAiModelDiaRepDatapointEntity datapoint) {
+    datapoints.add(datapoint);
+    datapoint.setChart(this);
+  }
+  public void removeDatapoint(MlAiModelDiaRepDatapointEntity datapoint) {
+    datapoints.remove(datapoint);
+    datapoint.setChart(null);
+  }
 
+  @ManyToOne
+  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_CHART_DIA_REPORT_ID")
+  private MlAiModelDiaReportEntity diagnosticsReport;
 }

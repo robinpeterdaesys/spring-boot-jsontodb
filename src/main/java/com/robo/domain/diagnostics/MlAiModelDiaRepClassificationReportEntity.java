@@ -30,4 +30,8 @@ public class MlAiModelDiaRepClassificationReportEntity {
   private Double f1Score;
   private Long support;
 
+  @ManyToOne
+  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_CLASSIFICATION_REPORT_DIAGNOSTICS_REPORT_ID")
+  private MlAiModelDiaReportEntity diagnosticsReport;
+
 }

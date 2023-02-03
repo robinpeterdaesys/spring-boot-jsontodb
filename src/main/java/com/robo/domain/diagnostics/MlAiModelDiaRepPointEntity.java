@@ -27,5 +27,8 @@ public class MlAiModelDiaRepPointEntity {
   private Long pointId;
   private Double x;
   private Double y;
+  @ManyToOne
+  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_DATAPOINT_DATAPOINT_ID")
+  private MlAiModelDiaRepDatapointEntity datapoint;
 
 }

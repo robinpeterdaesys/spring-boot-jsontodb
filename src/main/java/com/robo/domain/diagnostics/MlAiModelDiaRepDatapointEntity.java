@@ -28,15 +28,31 @@ public class MlAiModelDiaRepDatapointEntity {
           generator = "datapoint_sequence"
   )
   @JsonIgnore
+  @Column(name = "DATAPOINT_ID")
   private Long datapointId;
   private String color;
   private Long width;
   private String label;
+
+  @ManyToOne
+  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_CHART_CHART_ID")
+  private MlAiModelDiaRepChartEntity chart;
   @OneToMany(
+          mappedBy = "datapoint",
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
   @JoinColumn(name = "datapointId")
   private List<MlAiModelDiaRepPointEntity> points = new ArrayList<>();
+
+  public void addPoint(MlAiModelDiaRepPointEntity point) {
+    points.add(point);
+    point.setDatapoint(this);
+  }
+
+  public void removePoint(MlAiModelDiaRepPointEntity point) {
+    points.remove(point);
+    point.setDatapoint(this);
+  }
 
 }

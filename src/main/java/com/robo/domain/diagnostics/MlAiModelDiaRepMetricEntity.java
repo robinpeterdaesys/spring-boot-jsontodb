@@ -29,4 +29,8 @@ public class MlAiModelDiaRepMetricEntity {
   private String name;
   private Double value;
 
+  @ManyToOne
+  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_METRIC_DIAGNOSTICS_REPORT_ID")
+  private MlAiModelDiaReportEntity diagnosticsReport;
+
 }

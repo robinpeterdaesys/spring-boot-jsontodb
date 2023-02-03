@@ -47,4 +47,8 @@ public class MlAiModelDiaRepLiftGainEntity {
   private Float eighteen;
   private Float nineteen;
 
+  @ManyToOne
+  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_LIFT_GAIN_DIAGNOSTICS_REPORT_ID")
+  private MlAiModelDiaReportEntity diagnosticsReport;
+
 }
