@@ -1,14 +1,14 @@
 package com.robo.domain.diagnostics;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "ML_AI_MODEL_DIA_REP_METRIC")
@@ -29,8 +29,21 @@ public class MlAiModelDiaRepMetricEntity {
   private String name;
   private Double value;
 
-  @ManyToOne
-  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_METRIC_DIAGNOSTICS_REPORT_ID")
+  @ManyToOne(
+          fetch = FetchType.LAZY
+  )
+  @JoinColumn(name = "ML_AI_MODEL_DIA_REPORT_ID")
+  @JsonBackReference(value = "metric-diagnosticsReport")
   private MlAiModelDiaReportEntity diagnosticsReport;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof MlAiModelDiaRepMetricEntity )) return false;
+    return id != null && id.equals(((MlAiModelDiaRepMetricEntity) o).getId());
+  }
 
+  @Override
+  public int hashCode() {
+    return getClass().hashCode();
+  }
 }

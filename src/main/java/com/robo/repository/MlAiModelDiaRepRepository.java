@@ -1,7 +1,8 @@
 package com.robo.repository;
 
 import com.robo.domain.diagnostics.MlAiModelDiaReportEntity;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface MlAiModelDiaRepRepository extends CrudRepository<MlAiModelDiaReportEntity,Long> {
+public interface MlAiModelDiaRepRepository extends JpaRepository<MlAiModelDiaReportEntity,Long> {
+
 }

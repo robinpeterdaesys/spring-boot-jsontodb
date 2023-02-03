@@ -1,18 +1,15 @@
 package com.robo.domain.diagnostics;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "ML_AI_MODEL_DIA_REP_DATAPOINT")
@@ -34,25 +31,28 @@ public class MlAiModelDiaRepDatapointEntity {
   private Long width;
   private String label;
 
-  @ManyToOne
-  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_CHART_CHART_ID")
+  @ManyToOne(
+          fetch = FetchType.LAZY
+  )
+  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_CHART_ID")
+  @JsonBackReference(value = "datapoint-chart")
   private MlAiModelDiaRepChartEntity chart;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof MlAiModelDiaRepDatapointEntity )) return false;
+    return datapointId != null && datapointId.equals(((MlAiModelDiaRepDatapointEntity) o).getDatapointId());
+  }
+
+  @Override
+  public int hashCode() {
+    return getClass().hashCode();
+  }
   @OneToMany(
           mappedBy = "datapoint",
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
-  @JoinColumn(name = "datapointId")
-  private List<MlAiModelDiaRepPointEntity> points = new ArrayList<>();
-
-  public void addPoint(MlAiModelDiaRepPointEntity point) {
-    points.add(point);
-    point.setDatapoint(this);
-  }
-
-  public void removePoint(MlAiModelDiaRepPointEntity point) {
-    points.remove(point);
-    point.setDatapoint(this);
-  }
+  private List<MlAiModelDiaRepPointEntity> points;
 
 }

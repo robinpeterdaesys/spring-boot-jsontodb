@@ -1,15 +1,14 @@
 package com.robo.domain.diagnostics;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "ML_AI_MODEL_DIA_REPORT")
@@ -36,53 +35,43 @@ public class MlAiModelDiaReportEntity {
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
-  @JoinColumn(name = "diagnosticsReportId")
   @MapKeyColumn(name="CLASSIFICATION_REPORT_TYPE")
-  private Map<String, MlAiModelDiaRepClassificationReportEntity> classificationReports;
+  private Map<String, MlAiModelDiaRepClassificationReportEntity> classificationReport;
 
   @OneToMany(
           mappedBy = "diagnosticsReport",
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
-  @JoinColumn(name = "diagnosticsReportId")
   @MapKeyColumn(name="LIFT_GAIN_TYPE")
-  private Map<String, MlAiModelDiaRepLiftGainEntity> liftGains;
-
+  private Map<String, MlAiModelDiaRepLiftGainEntity> liftGain;
 
   @OneToMany(
           mappedBy = "diagnosticsReport",
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
-  @JoinColumn(name = "diagnosticsReportId")
   private List<MlAiModelDiaRepMetricEntity> metrics = new ArrayList<>();
 
-  public void addMetric(MlAiModelDiaRepMetricEntity metric) {
-    metrics.add(metric);
-    metric.setDiagnosticsReport(this);
-  }
-
-  public void removeMetric(MlAiModelDiaRepMetricEntity metric) {
-    metrics.remove(metric);
-    metric.setDiagnosticsReport(null);
-  }
-
   @OneToMany(
           mappedBy = "diagnosticsReport",
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
-  @JoinColumn(name = "diagnosticsReportId")
   private List<MlAiModelDiaRepChartEntity> charts = new ArrayList<>();
 
-  public void addChart(MlAiModelDiaRepChartEntity chart) {
-    charts.add(chart);
-    chart.setDiagnosticsReport(this);
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    MlAiModelDiaReportEntity that = (MlAiModelDiaReportEntity) o;
+
+    return diagnosticsReportId.equals(that.diagnosticsReportId);
   }
 
-  public void removePoint(MlAiModelDiaRepChartEntity chart) {
-    charts.remove(chart);
-    chart.setDiagnosticsReport(null);
+  @Override
+  public int hashCode() {
+    return diagnosticsReportId.hashCode();
   }
 }

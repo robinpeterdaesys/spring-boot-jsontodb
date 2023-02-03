@@ -1,14 +1,14 @@
 package com.robo.domain.diagnostics;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "ML_AI_MODEL_DIA_REP_LIFT_GAIN")
@@ -47,8 +47,25 @@ public class MlAiModelDiaRepLiftGainEntity {
   private Float eighteen;
   private Float nineteen;
 
-  @ManyToOne
-  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_LIFT_GAIN_DIAGNOSTICS_REPORT_ID")
-  private MlAiModelDiaReportEntity diagnosticsReport;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
 
+    MlAiModelDiaRepLiftGainEntity that = (MlAiModelDiaRepLiftGainEntity) o;
+
+    return liftGainId.equals(that.liftGainId);
+  }
+
+  @Override
+  public int hashCode() {
+    return liftGainId.hashCode();
+  }
+
+  @ManyToOne(
+          fetch = FetchType.LAZY
+  )
+  @JoinColumn(name = "ML_AI_MODEL_DIA_REPORT_ID")
+  @JsonBackReference(value = "liftGain-diagnosticsReport")
+  private MlAiModelDiaReportEntity diagnosticsReport;
 }

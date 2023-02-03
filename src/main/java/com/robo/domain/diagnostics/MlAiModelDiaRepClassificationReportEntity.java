@@ -1,14 +1,14 @@
 package com.robo.domain.diagnostics;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "ML_AI_MODEL_DIA_REP_CLASSIFICATION_REPORT")
@@ -30,8 +30,25 @@ public class MlAiModelDiaRepClassificationReportEntity {
   private Double f1Score;
   private Long support;
 
-  @ManyToOne
-  @JoinColumn(name = "ML_AI_MODEL_DIA_REP_CLASSIFICATION_REPORT_DIAGNOSTICS_REPORT_ID")
-  private MlAiModelDiaReportEntity diagnosticsReport;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
 
+    MlAiModelDiaRepClassificationReportEntity that = (MlAiModelDiaRepClassificationReportEntity) o;
+
+    return classificationReportId.equals(that.classificationReportId);
+  }
+
+  @Override
+  public int hashCode() {
+    return classificationReportId.hashCode();
+  }
+
+  @ManyToOne(
+          fetch = FetchType.LAZY
+  )
+  @JsonBackReference(value = "classificationReport-diagnosticsReport")
+  @JoinColumn(name = "ML_AI_MODEL_DIA_REPORT_ID")
+  private MlAiModelDiaReportEntity diagnosticsReport;
 }

@@ -43,6 +43,7 @@ public class JSONLintApplication {
 	CommandLineRunner classificationMetricsDiagnosticsReportRunner(MlAiModelDiaRepService diagnosticsReportService){
 		return args -> {
 			Instant start = Instant.now();
+			System.out.println("-----classificationMetricsDiagnosticsReportRunner-----STARTED---->>>>\n");
 			// read JSON and load json
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<MlAiModelDiaReportEntity> typeReference = new TypeReference<MlAiModelDiaReportEntity>(){};
@@ -59,7 +60,7 @@ public class JSONLintApplication {
 			}
 			Instant end = Instant.now();
 			Duration timeElapsed = Duration.between(start, end);
-			System.out.println("-----classificationMetricsDiagnosticsReportRunner-----timeElapsed---->>>>\n"+timeElapsed.getSeconds());
+			System.out.println("-----classificationMetricsDiagnosticsReportRunner-----timeElapsed---nanoseconds-->>>>\n"+timeElapsed.getNano());
 		};
 	}
 
@@ -67,6 +68,7 @@ public class JSONLintApplication {
 	CommandLineRunner classificationMetricsNoThresholdDiagnosticsReportRunner(MlAiModelDiaRepService diagnosticsReportService){
 		return args -> {
 			Instant start = Instant.now();
+			System.out.println("-----classificationMetricsNoThresholdDiagnosticsReportRunner-----STARTED---->>>>\n");
 			// read JSON and load json
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<MlAiModelDiaReportEntity> typeReference = new TypeReference<MlAiModelDiaReportEntity>(){};
@@ -82,7 +84,7 @@ public class JSONLintApplication {
 			}
 			Instant end = Instant.now();
 			Duration timeElapsed = Duration.between(start, end);
-			System.out.println("-----classificationMetricsNoThresholdDiagnosticsReportRunner-----timeElapsed---->>>>\n"+timeElapsed.getSeconds());
+			System.out.println("-----classificationMetricsNoThresholdDiagnosticsReportRunner-----timeElapsed---nanoseconds-->>>>\n"+timeElapsed.getNano());
 		};
 	}
 
@@ -91,6 +93,7 @@ public class JSONLintApplication {
 	CommandLineRunner continuousMetricsDiagnosticsReportRunner(MlAiModelDiaRepService diagnosticsReportService){
 		return args -> {
 			Instant start = Instant.now();
+			System.out.println("-----continuousMetricsDiagnosticsReportRunner-----STARTED---->>>>\n");
 			// read JSON and load json
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<MlAiModelDiaReportEntity> typeReference = new TypeReference<MlAiModelDiaReportEntity>(){};
@@ -105,7 +108,7 @@ public class JSONLintApplication {
 			}
 			Instant end = Instant.now();
 			Duration timeElapsed = Duration.between(start, end);
-			System.out.println("-----continuousMetricsDiagnosticsReportRunner-----timeElapsed---->>>>\n"+timeElapsed.getSeconds());
+			System.out.println("-----continuousMetricsDiagnosticsReportRunner-----timeElapsed--nanoseconds-->>>>\n"+timeElapsed.getNano());
 		};
 	}
 }
