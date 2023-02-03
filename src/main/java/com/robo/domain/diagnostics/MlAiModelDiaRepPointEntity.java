@@ -12,7 +12,6 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "ML_AI_MODEL_DIA_REP_POINT")
-
 public class MlAiModelDiaRepPointEntity {
   @Id
   @SequenceGenerator(

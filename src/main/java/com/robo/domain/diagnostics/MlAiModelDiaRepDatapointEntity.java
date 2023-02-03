@@ -2,7 +2,10 @@ package com.robo.domain.diagnostics;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.hypersistence.utils.hibernate.type.json.JsonType;
 import lombok.*;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,6 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "ML_AI_MODEL_DIA_REP_DATAPOINT")
+@TypeDef(typeClass = JsonType.class, defaultForType = BookRecord.class)
 public class MlAiModelDiaRepDatapointEntity {
   @Id
   @SequenceGenerator(
@@ -53,6 +57,7 @@ public class MlAiModelDiaRepDatapointEntity {
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
+  @Column(columnDefinition = "JSON")
   private List<MlAiModelDiaRepPointEntity> points;
 
 }
