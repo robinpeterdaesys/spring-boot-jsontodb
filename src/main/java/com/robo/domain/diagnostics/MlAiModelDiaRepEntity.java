@@ -59,6 +59,13 @@ public class MlAiModelDiaRepEntity {
           orphanRemoval = true
   )
   @JoinColumn(name = "diagnosticsReportId")
-  private List<MlAiModelDiaRepChartEntity> charts = new ArrayList<>();
+  private List<MlAiModelDiaRepChartEntity> dcharts = new ArrayList<>();
+
+  @OneToMany(
+          cascade = CascadeType.ALL,
+          orphanRemoval = true
+  )
+  @JoinColumn(name = "diagnosticsReportId")
+  private List<MlAiModelExpRepChartEntity> echarts = new ArrayList<>();
 
 }

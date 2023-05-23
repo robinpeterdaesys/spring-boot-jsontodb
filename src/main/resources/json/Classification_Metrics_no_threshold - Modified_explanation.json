@@ -1,0 +1,1326 @@
+{
+  "modelId": "3",
+  "diagnosticsDefinitionId": "3",
+  "diagnosticsId": "3",
+  "liftGain": {
+    "Semi-Decile": {
+      "zero": 1,
+      "one": 2,
+      "two": 3,
+      "three": 4,
+      "four": 5,
+      "five": 6,
+      "six": 7,
+      "seven": 8,
+      "eight": 9,
+      "nine": 10,
+      "ten": 11,
+      "eleven": 12,
+      "twelve": 13,
+      "thirteen": 14,
+      "fourteen": 15,
+      "fifteen": 16,
+      "sixteen": 17,
+      "seventeen": 18,
+      "eighteen": 19,
+      "nineteen": 20
+    },
+    "Number of Events": {
+      "zero": 3361,
+      "one": 3360,
+      "two": 3360,
+      "three": 3361,
+      "four": 3360,
+      "five": 3360,
+      "six": 3361,
+      "seven": 3360,
+      "eight": 3360,
+      "nine": 3360,
+      "ten": 3361,
+      "eleven": 3360,
+      "twelve": 3360,
+      "thirteen": 3361,
+      "fourteen": 3360,
+      "fifteen": 3360,
+      "sixteen": 3361,
+      "seventeen": 3360,
+      "eighteen": 3360,
+      "nineteen": 3361
+    },
+    "Number of Positive Events": {
+      "zero": 3361,
+      "one": 3360,
+      "two": 3360,
+      "three": 3361,
+      "four": 3360,
+      "five": 3360,
+      "six": 3361,
+      "seven": 3360,
+      "eight": 3357,
+      "nine": 1698,
+      "ten": 566,
+      "eleven": 366,
+      "twelve": 269,
+      "thirteen": 176,
+      "fourteen": 149,
+      "fifteen": 114,
+      "sixteen": 83,
+      "seventeen": 60,
+      "eighteen": 41,
+      "nineteen": 22
+    },
+    "Max_Possible Number of Positive Events": {
+      "zero": 3361,
+      "one": 3360,
+      "two": 3360,
+      "three": 3361,
+      "four": 3360,
+      "five": 3360,
+      "six": 3361,
+      "seven": 3360,
+      "eight": 3360,
+      "nine": 3360,
+      "ten": 181,
+      "eleven": 0,
+      "twelve": 0,
+      "thirteen": 0,
+      "fourteen": 0,
+      "fifteen": 0,
+      "sixteen": 0,
+      "seventeen": 0,
+      "eighteen": 0,
+      "nineteen": 0
+    },
+    "Max_Prob in Semi-Decile": {
+      "zero": 1.0,
+      "one": 1.0,
+      "two": 1.0,
+      "three": 0.99,
+      "four": 0.98,
+      "five": 0.96,
+      "six": 0.94,
+      "seven": 0.91,
+      "eight": 0.85,
+      "nine": 0.66,
+      "ten": 0.32,
+      "eleven": 0.24,
+      "twelve": 0.2,
+      "thirteen": 0.16,
+      "fourteen": 0.14,
+      "fifteen": 0.11,
+      "sixteen": 0.09,
+      "seventeen": 0.07,
+      "eighteen": 0.05,
+      "nineteen": 0.03
+    },
+    "Min_Prob in Semi-Decile": {
+      "zero": 1.0,
+      "one": 1.0,
+      "two": 0.99,
+      "three": 0.98,
+      "four": 0.96,
+      "five": 0.94,
+      "six": 0.91,
+      "seven": 0.85,
+      "eight": 0.66,
+      "nine": 0.32,
+      "ten": 0.24,
+      "eleven": 0.2,
+      "twelve": 0.16,
+      "thirteen": 0.14,
+      "fourteen": 0.11,
+      "fifteen": 0.09,
+      "sixteen": 0.07,
+      "seventeen": 0.05,
+      "eighteen": 0.03,
+      "nineteen": 0.0
+    },
+    "Number of Negative Events": {
+      "zero": 0,
+      "one": 0,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "five": 0,
+      "six": 0,
+      "seven": 0,
+      "eight": 3,
+      "nine": 1662,
+      "ten": 2795,
+      "eleven": 2994,
+      "twelve": 3091,
+      "thirteen": 3185,
+      "fourteen": 3211,
+      "fifteen": 3246,
+      "sixteen": 3278,
+      "seventeen": 3300,
+      "eighteen": 3319,
+      "nineteen": 3339
+    },
+    "Cumulative Number of Events": {
+      "zero": 3361,
+      "one": 6721,
+      "two": 10081,
+      "three": 13442,
+      "four": 16802,
+      "five": 20162,
+      "six": 23523,
+      "seven": 26883,
+      "eight": 30243,
+      "nine": 33603,
+      "ten": 36964,
+      "eleven": 40324,
+      "twelve": 43684,
+      "thirteen": 47045,
+      "fourteen": 50405,
+      "fifteen": 53765,
+      "sixteen": 57126,
+      "seventeen": 60486,
+      "eighteen": 63846,
+      "nineteen": 67207
+    },
+    "Cumulative Number of Positive Events": {
+      "zero": 3361,
+      "one": 6721,
+      "two": 10081,
+      "three": 13442,
+      "four": 16802,
+      "five": 20162,
+      "six": 23523,
+      "seven": 26883,
+      "eight": 30240,
+      "nine": 31938,
+      "ten": 32504,
+      "eleven": 32870,
+      "twelve": 33139,
+      "thirteen": 33315,
+      "fourteen": 33464,
+      "fifteen": 33578,
+      "sixteen": 33661,
+      "seventeen": 33721,
+      "eighteen": 33762,
+      "nineteen": 33784
+    },
+    "Cumulative Number of Negative Events": {
+      "zero": 0,
+      "one": 0,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "five": 0,
+      "six": 0,
+      "seven": 0,
+      "eight": 3,
+      "nine": 1665,
+      "ten": 4460,
+      "eleven": 7454,
+      "twelve": 10545,
+      "thirteen": 13730,
+      "fourteen": 16941,
+      "fifteen": 20187,
+      "sixteen": 23465,
+      "seventeen": 26765,
+      "eighteen": 30084,
+      "nineteen": 33423
+    },
+    "Positive Class Ratio": {
+      "zero": 0.5027,
+      "one": 0.5027,
+      "two": 0.5027,
+      "three": 0.5027,
+      "four": 0.5027,
+      "five": 0.5027,
+      "six": 0.5027,
+      "seven": 0.5027,
+      "eight": 0.5027,
+      "nine": 0.5027,
+      "ten": 0.5027,
+      "eleven": 0.5027,
+      "twelve": 0.5027,
+      "thirteen": 0.5027,
+      "fourteen": 0.5027,
+      "fifteen": 0.5027,
+      "sixteen": 0.5027,
+      "seventeen": 0.5027,
+      "eighteen": 0.5027,
+      "nineteen": 0.5027
+    },
+    "Semi-Decile Precision": {
+      "zero": 1.0,
+      "one": 1.0,
+      "two": 1.0,
+      "three": 1.0,
+      "four": 1.0,
+      "five": 1.0,
+      "six": 1.0,
+      "seven": 1.0,
+      "eight": 0.9991,
+      "nine": 0.5054,
+      "ten": 0.1684,
+      "eleven": 0.1089,
+      "twelve": 0.0801,
+      "thirteen": 0.0524,
+      "fourteen": 0.0443,
+      "fifteen": 0.0339,
+      "sixteen": 0.0247,
+      "seventeen": 0.0179,
+      "eighteen": 0.0122,
+      "nineteen": 0.0065
+    },
+    "Max_Possible Semi-Decile Precision": {
+      "zero": 1.0,
+      "one": 1.0,
+      "two": 1.0,
+      "three": 1.0,
+      "four": 1.0,
+      "five": 1.0,
+      "six": 1.0,
+      "seven": 1.0,
+      "eight": 1.0,
+      "nine": 1.0,
+      "ten": 0.0539,
+      "eleven": 0.0,
+      "twelve": 0.0,
+      "thirteen": 0.0,
+      "fourteen": 0.0,
+      "fifteen": 0.0,
+      "sixteen": 0.0,
+      "seventeen": 0.0,
+      "eighteen": 0.0,
+      "nineteen": 0.0
+    },
+    "Precision": {
+      "zero": 1.0,
+      "one": 1.0,
+      "two": 1.0,
+      "three": 1.0,
+      "four": 1.0,
+      "five": 1.0,
+      "six": 1.0,
+      "seven": 1.0,
+      "eight": 0.9999,
+      "nine": 0.9505,
+      "ten": 0.8793,
+      "eleven": 0.8151,
+      "twelve": 0.7586,
+      "thirteen": 0.7082,
+      "fourteen": 0.6639,
+      "fifteen": 0.6245,
+      "sixteen": 0.5892,
+      "seventeen": 0.5575,
+      "eighteen": 0.5288,
+      "nineteen": 0.5027
+    },
+    "Individual Lift": {
+      "zero": 1.9893,
+      "one": 1.9893,
+      "two": 1.9893,
+      "three": 1.9893,
+      "four": 1.9893,
+      "five": 1.9893,
+      "six": 1.9893,
+      "seven": 1.9893,
+      "eight": 1.9875,
+      "nine": 1.0053,
+      "ten": 0.335,
+      "eleven": 0.2167,
+      "twelve": 0.1593,
+      "thirteen": 0.1042,
+      "fourteen": 0.0882,
+      "fifteen": 0.0675,
+      "sixteen": 0.0491,
+      "seventeen": 0.0355,
+      "eighteen": 0.0243,
+      "nineteen": 0.013
+    },
+    "Max_Possible Individual Lift": {
+      "zero": 1.9893,
+      "one": 1.9893,
+      "two": 1.9893,
+      "three": 1.9893,
+      "four": 1.9893,
+      "five": 1.9893,
+      "six": 1.9893,
+      "seven": 1.9893,
+      "eight": 1.9893,
+      "nine": 1.9893,
+      "ten": 0.1071,
+      "eleven": 0.0,
+      "twelve": 0.0,
+      "thirteen": 0.0,
+      "fourteen": 0.0,
+      "fifteen": 0.0,
+      "sixteen": 0.0,
+      "seventeen": 0.0,
+      "eighteen": 0.0,
+      "nineteen": 0.0
+    },
+    "Cumulative Lift": {
+      "zero": 1.9893,
+      "one": 1.9893,
+      "two": 1.9893,
+      "three": 1.9893,
+      "four": 1.9893,
+      "five": 1.9893,
+      "six": 1.9893,
+      "seven": 1.9893,
+      "eight": 1.9891,
+      "nine": 1.8907,
+      "ten": 1.7492,
+      "eleven": 1.6215,
+      "twelve": 1.5091,
+      "thirteen": 1.4087,
+      "fourteen": 1.3207,
+      "fifteen": 1.2424,
+      "sixteen": 1.1722,
+      "seventeen": 1.109,
+      "eighteen": 1.0519,
+      "nineteen": 1.0
+    },
+    "True Positives (TP)": {
+      "zero": 3361,
+      "one": 6721,
+      "two": 10081,
+      "three": 13442,
+      "four": 16802,
+      "five": 20162,
+      "six": 23523,
+      "seven": 26883,
+      "eight": 30240,
+      "nine": 31938,
+      "ten": 32504,
+      "eleven": 32870,
+      "twelve": 33139,
+      "thirteen": 33315,
+      "fourteen": 33464,
+      "fifteen": 33578,
+      "sixteen": 33661,
+      "seventeen": 33721,
+      "eighteen": 33762,
+      "nineteen": 33784
+    },
+    "False Positives (FP)": {
+      "zero": 0,
+      "one": 0,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "five": 0,
+      "six": 0,
+      "seven": 0,
+      "eight": 3,
+      "nine": 1665,
+      "ten": 4460,
+      "eleven": 7454,
+      "twelve": 10545,
+      "thirteen": 13730,
+      "fourteen": 16941,
+      "fifteen": 20187,
+      "sixteen": 23465,
+      "seventeen": 26765,
+      "eighteen": 30084,
+      "nineteen": 33423
+    },
+    "True Negatives (TN)": {
+      "zero": 33423,
+      "one": 33423,
+      "two": 33423,
+      "three": 33423,
+      "four": 33423,
+      "five": 33423,
+      "six": 33423,
+      "seven": 33423,
+      "eight": 33420,
+      "nine": 31758,
+      "ten": 28963,
+      "eleven": 25969,
+      "twelve": 22878,
+      "thirteen": 19693,
+      "fourteen": 16482,
+      "fifteen": 13236,
+      "sixteen": 9958,
+      "seventeen": 6658,
+      "eighteen": 3339,
+      "nineteen": 0
+    },
+    "False Negatives (FN)": {
+      "zero": 30423,
+      "one": 27063,
+      "two": 23703,
+      "three": 20342,
+      "four": 16982,
+      "five": 13622,
+      "six": 10261,
+      "seven": 6901,
+      "eight": 3544,
+      "nine": 1846,
+      "ten": 1280,
+      "eleven": 914,
+      "twelve": 645,
+      "thirteen": 469,
+      "fourteen": 320,
+      "fifteen": 206,
+      "sixteen": 123,
+      "seventeen": 63,
+      "eighteen": 22,
+      "nineteen": 0
+    },
+    "True Positive Rate (TPR,Gain,Recall)": {
+      "zero": 0.0995,
+      "one": 0.1989,
+      "two": 0.2984,
+      "three": 0.3979,
+      "four": 0.4973,
+      "five": 0.5968,
+      "six": 0.6963,
+      "seven": 0.7957,
+      "eight": 0.8951,
+      "nine": 0.9454,
+      "ten": 0.9621,
+      "eleven": 0.9729,
+      "twelve": 0.9809,
+      "thirteen": 0.9861,
+      "fourteen": 0.9905,
+      "fifteen": 0.9939,
+      "sixteen": 0.9964,
+      "seventeen": 0.9981,
+      "eighteen": 0.9993,
+      "nineteen": 1.0
+    },
+    "False Positive Rate (FPR)": {
+      "zero": 0.0,
+      "one": 0.0,
+      "two": 0.0,
+      "three": 0.0,
+      "four": 0.0,
+      "five": 0.0,
+      "six": 0.0,
+      "seven": 0.0,
+      "eight": 0.0001,
+      "nine": 0.0498,
+      "ten": 0.1334,
+      "eleven": 0.223,
+      "twelve": 0.3155,
+      "thirteen": 0.4108,
+      "fourteen": 0.5069,
+      "fifteen": 0.604,
+      "sixteen": 0.7021,
+      "seventeen": 0.8008,
+      "eighteen": 0.9001,
+      "nineteen": 1.0
+    },
+    "True Negative Rate (Specificity, TNR)": {
+      "zero": 1.0,
+      "one": 1.0,
+      "two": 1.0,
+      "three": 1.0,
+      "four": 1.0,
+      "five": 1.0,
+      "six": 1.0,
+      "seven": 1.0,
+      "eight": 0.9999,
+      "nine": 0.9502,
+      "ten": 0.8666,
+      "eleven": 0.777,
+      "twelve": 0.6845,
+      "thirteen": 0.5892,
+      "fourteen": 0.4931,
+      "fifteen": 0.396,
+      "sixteen": 0.2979,
+      "seventeen": 0.1992,
+      "eighteen": 0.0999,
+      "nineteen": 0.0
+    },
+    "False Negative Rate (FNR)": {
+      "zero": 0.9005,
+      "one": 0.8011,
+      "two": 0.7016,
+      "three": 0.6021,
+      "four": 0.5027,
+      "five": 0.4032,
+      "six": 0.3037,
+      "seven": 0.2043,
+      "eight": 0.1049,
+      "nine": 0.0546,
+      "ten": 0.0379,
+      "eleven": 0.0271,
+      "twelve": 0.0191,
+      "thirteen": 0.0139,
+      "fourteen": 0.0095,
+      "fifteen": 0.0061,
+      "sixteen": 0.0036,
+      "seventeen": 0.0019,
+      "eighteen": 0.0007,
+      "nineteen": 0.0
+    },
+    "Accuracy": {
+      "zero": 0.5473,
+      "one": 0.5973,
+      "two": 0.6473,
+      "three": 0.6973,
+      "four": 0.7473,
+      "five": 0.7973,
+      "six": 0.8473,
+      "seven": 0.8973,
+      "eight": 0.9472,
+      "nine": 0.9478,
+      "ten": 0.9146,
+      "eleven": 0.8755,
+      "twelve": 0.8335,
+      "thirteen": 0.7887,
+      "fourteen": 0.7432,
+      "fifteen": 0.6966,
+      "sixteen": 0.649,
+      "seventeen": 0.6008,
+      "eighteen": 0.552,
+      "nineteen": 0.5027
+    },
+    "F1_Score": {
+      "zero": 0.181,
+      "one": 0.3318,
+      "two": 0.4596,
+      "three": 0.5693,
+      "four": 0.6643,
+      "five": 0.7475,
+      "six": 0.821,
+      "seven": 0.8862,
+      "eight": 0.9446,
+      "nine": 0.9479,
+      "ten": 0.9189,
+      "eleven": 0.8871,
+      "twelve": 0.8556,
+      "thirteen": 0.8243,
+      "fourteen": 0.795,
+      "fifteen": 0.7671,
+      "sixteen": 0.7405,
+      "seventeen": 0.7154,
+      "eighteen": 0.6916,
+      "nineteen": 0.669
+    }
+  },
+  "dcharts": [
+    {
+      "id": 1,
+      "name": "Receiver Operating Characteristic",
+      "charttype": "Line",
+      "title": "ROC",
+      "xaxistitle": "False Positive Rate",
+      "yaxistitle": "True Positive Rate",
+      "xaxislabels": [
+        0.0,
+        1.0
+      ],
+      "yaxislabels": [
+        0.0,
+        1.05
+      ],
+      "datapoints": [
+        {
+          "color": "blue",
+          "width": 2,
+          "label": "dt (auc = 0.98)",
+          "points": [
+            {
+              "x": 0.0,
+              "y": 0.0995
+            },
+            {
+              "x": 0.0,
+              "y": 0.1989
+            },
+            {
+              "x": 0.0,
+              "y": 0.2984
+            },
+            {
+              "x": 0.0,
+              "y": 0.3979
+            },
+            {
+              "x": 0.0,
+              "y": 0.4973
+            },
+            {
+              "x": 0.0,
+              "y": 0.5968
+            },
+            {
+              "x": 0.0,
+              "y": 0.6963
+            },
+            {
+              "x": 0.0,
+              "y": 0.7957
+            },
+            {
+              "x": 0.0001,
+              "y": 0.8951
+            },
+            {
+              "x": 0.0498,
+              "y": 0.9454
+            },
+            {
+              "x": 0.1334,
+              "y": 0.9621
+            },
+            {
+              "x": 0.223,
+              "y": 0.9729
+            },
+            {
+              "x": 0.3155,
+              "y": 0.9809
+            },
+            {
+              "x": 0.4108,
+              "y": 0.9861
+            },
+            {
+              "x": 0.5069,
+              "y": 0.9905
+            },
+            {
+              "x": 0.604,
+              "y": 0.9939
+            },
+            {
+              "x": 0.7021,
+              "y": 0.9964
+            },
+            {
+              "x": 0.8008,
+              "y": 0.9981
+            },
+            {
+              "x": 0.9001,
+              "y": 0.9993
+            },
+            {
+              "x": 1.0,
+              "y": 1.0
+            }
+          ]
+        },
+        {
+          "color": "navy",
+          "width": 2,
+          "label": "random model",
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1,
+              "y": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Precision Recall Curve",
+      "charttype": "Line",
+      "title": "PRC",
+      "xaxistitle": "Recall",
+      "yaxistitle": "Precision",
+      "xaxislabels": [
+        0.0,
+        1.0
+      ],
+      "yaxislabels": [
+        0.0,
+        1.05
+      ],
+      "datapoints":[
+        {
+        "color": "blue",
+        "width": 2,
+        "label": "dt (ap = 0.99)",
+        "points": [
+          {
+            "x": 0.0995,
+            "y": 1.0
+          },
+          {
+            "x": 0.1989,
+            "y": 1.0
+          },
+          {
+            "x": 0.2984,
+            "y": 1.0
+          },
+          {
+            "x": 0.3979,
+            "y": 1.0
+          },
+          {
+            "x": 0.4973,
+            "y": 1.0
+          },
+          {
+            "x": 0.5968,
+            "y": 1.0
+          },
+          {
+            "x": 0.6963,
+            "y": 1.0
+          },
+          {
+            "x": 0.7957,
+            "y": 1.0
+          },
+          {
+            "x": 0.8951,
+            "y": 0.9999
+          },
+          {
+            "x": 0.9454,
+            "y": 0.9505
+          },
+          {
+            "x": 0.9621,
+            "y": 0.8793
+          },
+          {
+            "x": 0.9729,
+            "y": 0.8151
+          },
+          {
+            "x": 0.9809,
+            "y": 0.7586
+          },
+          {
+            "x": 0.9861,
+            "y": 0.7082
+          },
+          {
+            "x": 0.9905,
+            "y": 0.6639
+          },
+          {
+            "x": 0.9939,
+            "y": 0.6245
+          },
+          {
+            "x": 0.9964,
+            "y": 0.5892
+          },
+          {
+            "x": 0.9981,
+            "y": 0.5575
+          },
+          {
+            "x": 0.9993,
+            "y": 0.5288
+          },
+          {
+            "x": 1.0,
+            "y": 0.5027
+          }
+        ]
+      }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Cumulative Lift Curve",
+      "charttype": "Line",
+      "title": "Lift Curve",
+      "xaxistitle": "Decile",
+      "yaxistitle": "Lift",
+      "xaxislabels": [
+        0.0,
+        1.9893
+      ],
+      "yaxislabels": [
+        0.0,
+        20
+      ],
+      "datapoints": [
+        {
+          "color": "blue",
+          "width": 2,
+          "label": "dt",
+          "points": [
+            {
+              "x": 1,
+              "y": 1.9893
+            },
+            {
+              "x": 2,
+              "y": 1.9893
+            },
+            {
+              "x": 3,
+              "y": 1.9893
+            },
+            {
+              "x": 4,
+              "y": 1.9893
+            },
+            {
+              "x": 5,
+              "y": 1.9893
+            },
+            {
+              "x": 6,
+              "y": 1.9893
+            },
+            {
+              "x": 7,
+              "y": 1.9893
+            },
+            {
+              "x": 8,
+              "y": 1.9893
+            },
+            {
+              "x": 9,
+              "y": 1.9891
+            },
+            {
+              "x": 10,
+              "y": 1.8907
+            },
+            {
+              "x": 11,
+              "y": 1.7492
+            },
+            {
+              "x": 12,
+              "y": 1.6215
+            },
+            {
+              "x": 13,
+              "y": 1.5091
+            },
+            {
+              "x": 14,
+              "y": 1.4087
+            },
+            {
+              "x": 15,
+              "y": 1.3207
+            },
+            {
+              "x": 16,
+              "y": 1.2424
+            },
+            {
+              "x": 17,
+              "y": 1.1722
+            },
+            {
+              "x": 18,
+              "y": 1.109
+            },
+            {
+              "x": 19,
+              "y": 1.0519
+            },
+            {
+              "x": 20,
+              "y": 1.0
+            }
+          ]
+        },
+        {
+          "color": "blue",
+          "width": 2,
+          "label": "perfect model",
+          "points": [
+            {
+              "x": 1,
+              "y": 1.989258006763477
+            },
+            {
+              "x": 2,
+              "y": 1.989258006763477
+            },
+            {
+              "x": 3,
+              "y": 1.989258006763477
+            },
+            {
+              "x": 4,
+              "y": 1.989258006763477
+            },
+            {
+              "x": 5,
+              "y": 1.989258006763477
+            },
+            {
+              "x": 6,
+              "y": 1.989258006763477
+            },
+            {
+              "x": 7,
+              "y": 1.989258006763477
+            },
+            {
+              "x": 8,
+              "y": 1.989258006763477
+            },
+            {
+              "x": 9,
+              "y": 1.989258006763477
+            },
+            {
+              "x": 10,
+              "y": 1.989258006763477
+            },
+            {
+              "x": 11,
+              "y": 1.8181228357455175
+            },
+            {
+              "x": 12,
+              "y": 1.6666276287198024
+            },
+            {
+              "x": 13,
+              "y": 1.5384372424800228
+            },
+            {
+              "x": 14,
+              "y": 1.4285278456902393
+            },
+            {
+              "x": 15,
+              "y": 1.3333021029758419
+            },
+            {
+              "x": 16,
+              "y": 1.249978471133587
+            },
+            {
+              "x": 17,
+              "y": 1.176436167428094
+            },
+            {
+              "x": 18,
+              "y": 1.1110850858132016
+            },
+            {
+              "x": 19,
+              "y": 1.052612418953377
+            },
+            {
+              "x": 20,
+              "y": 0.9999716175472393
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Cumulative Gain Curve",
+      "charttype": "Line",
+      "title": "Gain Curve",
+      "xaxistitle": "Decile",
+      "yaxistitle": "Gain",
+      "xaxislabels": [
+        0.0,
+        1.0
+      ],
+      "yaxislabels": [
+        0.0,
+        20
+      ],
+      "datapoints": [
+        {
+          "color": "blue",
+          "width": 2,
+          "label": "dt",
+          "points": [
+            {
+              "x": 1,
+              "y": 0.0995
+            },
+            {
+              "x": 2,
+              "y": 0.1989
+            },
+            {
+              "x": 3,
+              "y": 0.2984
+            },
+            {
+              "x": 4,
+              "y": 0.3979
+            },
+            {
+              "x": 5,
+              "y": 0.4973
+            },
+            {
+              "x": 6,
+              "y": 0.5968
+            },
+            {
+              "x": 7,
+              "y": 0.6963
+            },
+            {
+              "x": 8,
+              "y": 0.7957
+            },
+            {
+              "x": 9,
+              "y": 0.8951
+            },
+            {
+              "x": 10,
+              "y": 0.9454
+            },
+            {
+              "x": 11,
+              "y": 0.9621
+            },
+            {
+              "x": 12,
+              "y": 0.9729
+            },
+            {
+              "x": 13,
+              "y": 0.9809
+            },
+            {
+              "x": 14,
+              "y": 0.9861
+            },
+            {
+              "x": 15,
+              "y": 0.9905
+            },
+            {
+              "x": 16,
+              "y": 0.9939
+            },
+            {
+              "x": 17,
+              "y": 0.9964
+            },
+            {
+              "x": 18,
+              "y": 0.9981
+            },
+            {
+              "x": 19,
+              "y": 0.9993
+            },
+            {
+              "x": 20,
+              "y": 1.0
+            }
+          ]
+        },
+        {
+          "color": "blue",
+          "width": 2,
+          "label": "perfect model",
+          "points": [
+            {
+              "x": 1,
+              "y": 0.0995
+            },
+            {
+              "x": 2,
+              "y": 0.1989
+            },
+            {
+              "x": 3,
+              "y": 0.2984
+            },
+            {
+              "x": 4,
+              "y": 0.3979
+            },
+            {
+              "x": 5,
+              "y": 0.4973
+            },
+            {
+              "x": 6,
+              "y": 0.5968
+            },
+            {
+              "x": 7,
+              "y": 0.6963
+            },
+            {
+              "x": 8,
+              "y": 0.7957
+            },
+            {
+              "x": 9,
+              "y": 0.8952
+            },
+            {
+              "x": 10,
+              "y": 0.9946
+            },
+            {
+              "x": 11,
+              "y": 1.0
+            },
+            {
+              "x": 12,
+              "y": 1.0
+            },
+            {
+              "x": 13,
+              "y": 1.0
+            },
+            {
+              "x": 14,
+              "y": 1.0
+            },
+            {
+              "x": 15,
+              "y": 1.0
+            },
+            {
+              "x": 16,
+              "y": 1.0
+            },
+            {
+              "x": 17,
+              "y": 1.0
+            },
+            {
+              "x": 18,
+              "y": 1.0
+            },
+            {
+              "x": 19,
+              "y": 1.0
+            },
+            {
+              "x": 20,
+              "y": 1.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "echarts": [
+    {
+      "id": 1,
+      "name": "Feature Importance [FEATURE_IMPORTANCE]",
+      "charttype": "Bar",
+      "xaxistitle": "Shap Values",
+      "yaxistitle": "Fetaure Names",
+      "xaxislabels": [
+        0.0,
+        1.0
+      ],
+      "yaxislabels": [
+        0.0,
+        0.0
+      ],
+      "datapoints": [
+        {
+          "color": "blue",
+          "width": 0.5,
+          "label": "lr",
+          "points": [
+            {
+              "x": 14.046772730769194,
+              "y": "A"
+            },
+            {
+              "x": 12.115868038461521,
+              "y": "STATE"
+            },
+            {
+              "x": 9.193361346153838,
+              "y": "AGE_YOUNGEST"
+            },
+            {
+              "x": 8.181050230769215,
+              "y": "HOMEOWNER"
+            },
+            {
+              "x": 5.290677076923076,
+              "y": "E"
+            },
+            {
+              "x": 5.19657007692308,
+              "y": "G"
+            },
+            {
+              "x": 5.15228715384614,
+              "y": "CAR_AGE"
+            },
+            {
+              "x": 4.513129730769229,
+              "y": "C"
+            },
+            {
+              "x": 4.084737230769235,
+              "y": "AGE_OLDEST"
+            },
+            {
+              "x": 3.907880153846147,
+              "y": "F"
+            },
+            {
+              "x": 3.855207846153854,
+              "y": "LOCATION"
+            },
+            {
+              "x": 2.0368571538461519,
+              "y": "D"
+            },
+            {
+              "x": 1.9114649615384614,
+              "y": "DAY"
+            },
+            {
+              "x": 1.2937649230769258,
+              "y": "B"
+            },
+            {
+              "x": 1.2761249615384643,
+              "y": "SHOPPING_PT"
+            },
+            {
+              "x": 1.0751900384615397,
+              "y": "MARRIED_COUPLE"
+            },
+            {
+              "x": 1.0332871538461555,
+              "y": "GROUP_SIZE"
+            },
+            {
+              "x": 0.1613564999999987,
+              "y": "RECORD_TYPE"
+            },
+            {
+              "x": 0.0,
+              "y": "CAR_VALUE"
+            },
+            {
+              "x": 0.0,
+              "y": "RISK_FACTOR"
+            },
+            {
+              "x": 0.0,
+              "y": "C_PREVIOUS"
+            },
+            {
+              "x": 0.0,
+              "y": "DURATION_PREVIOUS"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -44,7 +44,7 @@ public class JSONLintApplication {
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<MlAiModelDiaRepEntity> typeReference = new TypeReference<MlAiModelDiaRepEntity>(){};
 			//InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics.json");
-			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics - Modified.json");
+			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics - Modified_explanation.json");
 			//InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics - Modified - MlAiModelDiaRepClassificationReportEntity - Excluded MlAiModelDiaRepLiftGainEntity.json");
 			//InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics - Modified - Excluded MlAiModelDiaRepLiftGainEntity.json");
 			try {
@@ -65,7 +65,7 @@ public class JSONLintApplication {
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<MlAiModelDiaRepEntity> typeReference = new TypeReference<MlAiModelDiaRepEntity>(){};
 			//InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_no_threshold.json");
-			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_no_threshold - Modified.json");
+			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_no_threshold - Modified_explanation.json");
 			//InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Classification_Metrics_no_threshold - Modified - Excluded MlAiModelDiaRepLiftGainEntity.json");
 			try {
 				MlAiModelDiaRepEntity diagnosticsReport = mapper.readValue(inputStream,typeReference);
@@ -86,7 +86,7 @@ public class JSONLintApplication {
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<MlAiModelDiaRepEntity> typeReference = new TypeReference<MlAiModelDiaRepEntity>(){};
 			//InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Continuous_Metrics.json");
-			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Continuous_Metrics - Modified.json");
+			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Continuous_Metrics - Modified_explanation.json");
 			try {
 				MlAiModelDiaRepEntity diagnosticsReport = mapper.readValue(inputStream,typeReference);
 				System.out.println("ContinuousMetricsDiagnosticsReport"+diagnosticsReport);
